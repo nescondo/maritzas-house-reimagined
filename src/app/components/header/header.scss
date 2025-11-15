@@ -1,0 +1,51 @@
+.background {
+  display: flex;
+  padding: 30px 2% 0 2%;
+  padding-bottom: 30px;
+  flex-direction: row;
+  justify-content: flex-start;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: clamp(32px, 5vw, 72px);
+  gap: 15px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.nav-bar {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+
+@media (max-width: 768px) {
+  .background {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .title {
+    margin-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
+  
+  .nav-bar {
+    padding-left: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+    gap: 10px;
+  }
+}

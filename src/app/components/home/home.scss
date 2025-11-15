@@ -1,0 +1,41 @@
+.photo {
+    display: flex;
+    border-radius: 360px;
+    align-items: left;
+    margin-top: 50px;
+    margin-left: 20%;
+}
+
+.welcome-caption {
+    display: flex;
+    align-items: center;
+    margin: 100px 50px 50px 50px;
+    justify-content: space-around;
+    font-size: 72px;
+}
+
+.welcome-description {
+    display: flex;
+    align-items: center;
+    margin: 15px 50px 50px 50px;
+    justify-content: space-around;
+    font-size: 42px;
+}
+
+.welcome-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 36px;
+    margin-right: 25px;
+    padding: 30px;
+}
+
+mat-card {
+    margin: 52px;
+}
+
