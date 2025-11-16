@@ -24,12 +24,6 @@ html {
     container-text-color: #2D3436,
   ));
   
-
-  // @include mat.card-overrides((
-  //   elevated-container-color: #FFFFFF,
-  // ));
-  
-  
   @include mat.button-overrides((
     filled-container-color: #7A9B8E,
     filled-label-text-color: #FFFFFF,

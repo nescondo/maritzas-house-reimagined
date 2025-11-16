@@ -1,3 +1,19 @@
+<header style="position: sticky; top: 0; z-index: 1000;">
+    <div class="background">
+        <div class="logo">
+            <mat-icon>home</mat-icon>
+        </div>
+        <div class="title">
+            <a>Maritza's House</a>
+        </div>
+        <div>
+            <button mat-button (click)="scrollToSection('home')">Home</button>
+            <button mat-button (click)="scrollToSection('about')">About Us</button>
+            <button mat-button (click)="scrollToSection('contact')">Contact</button>
+        </div>
+    </div>
+</header>
+
 <section>
     <img src="/images/elderly_hand_holding.JPG" class="background-image" alt="Caring hands">
     <div class="content-overlay">
@@ -10,8 +26,8 @@
             </div>
 
             <div class="welcome-btns">
-                <button mat-flat-button>Schedule a Visit</button>
-                <button mat-stroked-button>Learn More</button>
+                <button mat-flat-button class="home-btn">Schedule a Visit</button>
+                <button mat-stroked-button class="home-btn">Learn More</button>
             </div>
         </mat-card>
     </div>
