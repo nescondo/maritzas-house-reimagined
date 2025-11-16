@@ -1,11 +1,7 @@
 <header style="position: sticky; top: 0; z-index: 1000;">
     <div class="header-background">
-        <div class="logo">
-            <mat-icon>home</mat-icon>
-        </div>
-        <div class="title">
-            <a>Maritza's House</a>
-        </div>
+        <mat-icon class="logo">home</mat-icon>
+        <span class="title">Maritza's House</span>
         <div>
             <button mat-button (click)="scrollToSection('home')">Home</button>
             <button mat-button (click)="scrollToSection('about')">About Us</button>
@@ -13,6 +9,7 @@
         </div>
     </div>
 </header>
+
 
 <section id="home">
     <img src="/images/elderly_hand_holding.JPG" class="background-image" alt="Caring hands">

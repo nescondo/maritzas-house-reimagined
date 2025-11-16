@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ViewportScroller } from '@angular/common';
@@ -12,7 +12,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatButtonModule,
     MatIconModule,
     MatTabsModule,
-],
+  ],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

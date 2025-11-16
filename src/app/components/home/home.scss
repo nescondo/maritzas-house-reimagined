@@ -1,114 +1,158 @@
+// Home page styling
 #home {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  overflow: hidden; 
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
 }
 
-// Home page styling
 .welcome-caption {
     display: flex;
     align-items: center;
-    margin: 25px 50px 0 50px;
-    font-size: 22px;
+    margin: clamp(20px, 5vw, 50px) clamp(15px, 5vw, 50px) 0;
+    justify-content: space-around;
+    font-size: clamp(16px, 2vw, 22px);
 }
 
 .welcome-description {
     display: flex;
     align-items: center;
-    margin: -25px 50px 50px 50px;
+    margin: -25px clamp(15px, 5vw, 50px) clamp(20px, 5vw, 50px);
     justify-content: space-around;
-    font-size: 30px;
+    font-size: clamp(18px, 2.5vw, 30px);
 }
 
 .welcome-btns {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -25px;
-    margin-bottom: 50px;
+    margin-top: -15px;
+    margin-bottom: clamp(20px, 5vw, 50px);
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: auto;
 }
 
 .background-image {
     position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     z-index: 0;
 }
 
 .content-overlay {
     position: relative;
     z-index: 1;
-    padding: 20px;
+    padding: clamp(20px, 5vw, 100px);
     width: 100%;
-    max-width: 800px;
+    max-width: none;
+    display: flex;
 }
 
 .home-btn {
-    font-size: 30px;
+    font-size: clamp(18px, 2.5vw, 30px);
     margin-right: 25px;
-    padding: 30px;
+    padding: clamp(15px, 2vw, 30px);
 }
 
-.welcome-card {
-    margin: 80px;
+mat-card {
+    margin: 0;
     background-color: rgba(255, 255, 255, 0.8);
+    max-width: 100px;
+    width: 100%;
+    padding: clamp(10px, 2vw, 30px);
 }
 
 // Header styling
 .header-background {
   display: flex;
   align-items: center;
-  padding: 7px 20px 7px 20px;
-  flex-direction: row;
-  justify-content: flex-end;
+  padding: 7px clamp(10px, 3vw, 20px);
+  justify-content: space-between;
   background-color: rgba(255, 255, 255, 100);
   gap: 10px;
 }
 
-.title {
-  display: flex;
-  align-items: center;
-  font-size: 25px;
-  flex: 1;
-  min-width: 250px;
-}
-
 .logo {
-    display: flex;
-    align-items: center;
-}
-
-mat-icon {
   color: #7A9B8E;
   transform: scale(1.2);
+  flex-shrink: 0;
 }
 
+.title {
+  font-size: clamp(18px, 2.5vw, 25px);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-right: auto;
+}
+
+
+.nav-buttons {
+  display: flex;
+  gap: clamp(5px, 1vw, 10px);
+  flex-shrink: 0;
+}
+
+// Make header buttons smaller on mobile
+.header-background button {
+  font-size: clamp(12px, 1.5vw, 14px);
+  padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
+  white-space: nowrap;
+}
+
+// Responsive adjustments for small screens only
 @media (max-width: 768px) {
+  .title {
+    font-size: 16px;
+  }
+
   .background {
     flex-direction: column;
     padding: 15px;
   }
-  
-  .title {
-    margin-left: 0;
-    padding-right: 0;
-    justify-content: center;
-  }
 }
 
 @media (max-width: 480px) {
+  .header-background {
+    padding: 5px 10px;
+    gap: 5px;
+  }
+
   .title {
-    font-size: 32px;
-    gap: 10px;
+    font-size: 14px;
+  }
+
+  .logo {
+    transform: scale(1);
+  }
+
+  .nav-buttons {
+    gap: 5px;
+  }
+
+  .home-btn {
+    margin-right: 0;
+    width: auto;
   }
 }
 
 // About page styling
+#about {
+    position: relative;
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .our-mission-title {
     display: flex;
     align-items: center;
@@ -125,14 +169,19 @@ mat-icon {
     font-size: 20px;
 }
 
-.content-overlay {
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-    width: 100%;
-    max-width: 800px;
+mat-card {
+  animation: slide-fade 1s;
+  max-width: 900px;
 }
-.about-card {
-    margin: 52px;
-    background-color: rgba(255, 255, 255, 0.8);
+
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
