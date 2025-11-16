@@ -52,7 +52,6 @@
     z-index: 1;
     padding: clamp(20px, 5vw, 100px);
     width: 100%;
-    max-width: none;
     display: flex;
 }
 
@@ -60,14 +59,6 @@
     font-size: clamp(18px, 2.5vw, 30px);
     margin-right: 25px;
     padding: clamp(15px, 2vw, 30px);
-}
-
-mat-card {
-    margin: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    max-width: 100px;
-    width: 100%;
-    padding: clamp(10px, 2vw, 30px);
 }
 
 // Header styling
@@ -93,7 +84,6 @@ mat-card {
   margin-right: auto;
 }
 
-
 .nav-buttons {
   display: flex;
   gap: clamp(5px, 1vw, 10px);
@@ -105,6 +95,77 @@ mat-card {
   font-size: clamp(12px, 1.5vw, 14px);
   padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
   white-space: nowrap;
+}
+
+// About page styling
+#about {
+    position: relative;
+    padding-top: 10vh;
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-mission-title {
+    display: flex;
+    align-items: center;
+    margin: clamp(20px, 5vw, 50px) clamp(15px, 5vw, 50px) 0;
+    justify-content: space-around;
+    font-size: clamp(30px, 2vw, 40px);
+}
+
+.our-mission-desc {
+    display: flex;
+    align-items: center;
+    margin: clamp(15px, 5vw, 50px) clamp(20px, 5vw, 50px);
+    justify-content: space-around;
+    font-size: clamp(18px, 2.5vw, 30px);
+}
+
+.about-card {
+  padding: clamp(20px, 3vw, 40px) clamp(10px, 3vw, 20px) clamp(20px, 3vw, 40px);
+  opacity: 0.9;
+}
+
+// Contact page styling
+#contact {
+  position: relative;
+  padding-top: 10vh;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.side-description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+mat-card {
+  animation: slide-fade 1s;
+  max-width: 900px;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: clamp(30px, 2vw, 60px);
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 // Responsive adjustments for small screens only
@@ -140,48 +201,5 @@ mat-card {
   .home-btn {
     margin-right: 0;
     width: auto;
-  }
-}
-
-// About page styling
-#about {
-    position: relative;
-    min-height: 50vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.our-mission-title {
-    display: flex;
-    align-items: center;
-    margin: 50px 50px 0 50px;
-    justify-content: space-around;
-    font-size: 30px;
-}
-
-.our-mission-desc {
-    display: flex;
-    align-items: center;
-    margin: 15px 50px 50px 50px;
-    justify-content: space-around;
-    font-size: 20px;
-}
-
-mat-card {
-  animation: slide-fade 1s;
-  max-width: 900px;
-}
-
-@keyframes slide-fade {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
