@@ -1,12 +1,16 @@
 <div class="background">
+    <div class="logo">
+        <mat-icon style="margin-top: 10px">home</mat-icon>
+    </div>
     <div class="title">
-        <img src="imgs/home.png" width="50" height="50">
-        <a>Maritza's House</a>
+        <!-- <img src="imgs/home.png" width="50" height="50"> -->
+        <a style="margin-top: 10px">Maritza's House</a>
     </div>
     <div class="nav-bar">
         <nav mat-tab-nav-bar [tabPanel]="tabPanel">
             @for (link of navLinks; track link.path) {
-                <a mat-tab-link 
+                <a mat-tab-link
+                style="font-size: 20px;" 
                 [routerLink]="link.path"
                 routerLinkActive
                 #rla="routerLinkActive"

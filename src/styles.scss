@@ -2,6 +2,7 @@
 @use 'app/styles/theme-colors' as maritzas-theme;
 
 html {
+
   @include mat.core();
   
   $theme: mat.define-theme((
@@ -10,8 +11,11 @@ html {
       primary: maritzas-theme.$primary-palette,
       tertiary: maritzas-theme.$tertiary-palette,
     ),
+    typography: (
+      brand-family: 'Inter',
+      plain-family: 'Inter',
+    )
   ));
-  
 
   @include mat.all-component-themes($theme);
   
@@ -42,4 +46,10 @@ html {
 body {
   margin: 0;
   background-color: #FAF9F7;
+}
+
+* {
+  font-family: 'Inter';
+  font-weight: 300;
+  letter-spacing: -.75px;
 }
