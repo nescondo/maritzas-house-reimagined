@@ -7,7 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     MatCardModule,
     MatButtonModule,
-  ],
+],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

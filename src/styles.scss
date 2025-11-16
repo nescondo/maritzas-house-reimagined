@@ -25,9 +25,9 @@ html {
   ));
   
 
-  @include mat.card-overrides((
-    elevated-container-color: #FFFFFF,
-  ));
+  // @include mat.card-overrides((
+  //   elevated-container-color: #FFFFFF,
+  // ));
   
   
   @include mat.button-overrides((
