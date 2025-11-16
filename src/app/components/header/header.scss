@@ -1,7 +1,7 @@
 .background {
   display: flex;
   padding: 30px 2% 0 2%;
-  padding-bottom: 30px;
+  padding-top: 40px;
   flex-direction: row;
   justify-content: flex-start;
   box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
@@ -12,6 +12,8 @@
 .title {
   display: flex;
   align-items: center;
+  margin-top: -15px;
+  margin-bottom: 15px;
   font-size: clamp(32px, 5vw, 72px);
   gap: 15px;
   flex: 1;
