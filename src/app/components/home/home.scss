@@ -9,12 +9,19 @@
     overflow: hidden;
 }
 
+.welcome-card {
+  background-color: rgba(250, 249, 247, 0.8);
+  max-width: 900px;
+}
+
 .welcome-caption {
     display: flex;
     align-items: center;
     margin: clamp(20px, 5vw, 50px) clamp(15px, 5vw, 50px) 0;
     justify-content: space-around;
-    font-size: clamp(16px, 2vw, 22px);
+    font-family: 'Crimson Text', serif;
+    font-size: 1.25rem;
+    color: #3d4f44;
 }
 
 .welcome-description {
@@ -23,6 +30,7 @@
     margin: -25px clamp(15px, 5vw, 50px) clamp(20px, 5vw, 50px);
     justify-content: space-around;
     font-size: clamp(18px, 2.5vw, 30px);
+    color: #3d4f44;
 }
 
 .welcome-btns {
@@ -82,6 +90,7 @@
   white-space: nowrap;
   flex-shrink: 0;
   margin-right: auto;
+  color: #3d4f44;
 }
 
 .nav-buttons {
@@ -92,47 +101,88 @@
 
 // Make header buttons smaller on mobile
 .header-background button {
-  font-size: clamp(12px, 1.5vw, 14px);
+  font-size: clamp(12px, 1.5vw, 18px);
   padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
   white-space: nowrap;
 }
 
 // About page styling
 #about {
-    position: relative;
-    padding-top: 10vh;
-    min-height: 50vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  // padding: 4rem 2rem;
 }
 
-.our-mission-title {
-    display: flex;
-    align-items: center;
-    margin: clamp(20px, 5vw, 50px) clamp(15px, 5vw, 50px) 0;
+.our-values-title {
+    margin: clamp(10px, 5vw, 10px) clamp(15px, 5vw, 50px) 0;
     justify-content: space-around;
     font-size: clamp(30px, 2vw, 40px);
 }
 
-.our-mission-desc {
-    display: flex;
-    align-items: center;
-    margin: clamp(15px, 5vw, 50px) clamp(20px, 5vw, 50px);
-    justify-content: space-around;
-    font-size: clamp(18px, 2.5vw, 30px);
+.our-values-intro {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+  text-align: center;
 }
 
-.about-card {
-  padding: clamp(20px, 3vw, 40px) clamp(10px, 3vw, 20px) clamp(20px, 3vw, 40px);
-  opacity: 0.9;
+.our-values-intro h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  color: #3d4f44;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.our-values-intro p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: #5a6b5f;
+}
+
+.our-values-actual-values {
+  display: flex;
+  flex-direction: row;
+  max-width: 1500px;
+  align-items: center;
+  font-family: 'Cormorant Garamond', serif;
+  color: #3d4f44;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.our-values-compassion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.our-values-independence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-values-dignity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-values-desc {
+    margin: clamp(15px, 5vw, 20px) clamp(90px, 5vw, 100px);
+    font-size: clamp(15px, 2.5vw, 20px);
+    text-wrap: balance;
+    text-align: center;
 }
 
 // Contact page styling
 #contact {
   position: relative;
-  padding-top: 10vh;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -142,17 +192,13 @@
 }
 
 .side-description {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  padding-left: 20px;
+  padding-left: 50px;
+  inline-size: 400px; 
+  text-align: start;
 }
 
 mat-card {
   animation: slide-fade 1s;
-  max-width: 900px;
-  margin: 0;
-  background-color: rgba(255, 255, 255, 0.8);
   padding: clamp(30px, 2vw, 60px);
 }
 
@@ -203,3 +249,14 @@ mat-card {
     width: auto;
   }
 }
+
+.care-svg {
+  padding-top: 15px;
+  fill: #7A9B8E;
+  stroke: #7A9B8E;
+}
+
+// .independence-svg {
+//   fill: #7A9B8E;
+//   stroke: #7A9B8E;
+// }

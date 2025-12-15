@@ -11,10 +11,6 @@ html {
       primary: maritzas-theme.$primary-palette,
       tertiary: maritzas-theme.$tertiary-palette,
     ),
-    typography: (
-      brand-family: 'Inter',
-      plain-family: 'Inter',
-    )
   ));
 
   @include mat.all-component-themes($theme);
@@ -28,13 +24,12 @@ html {
     filled-container-color: #7A9B8E,
     filled-label-text-color: #FFFFFF,
     outlined-outline-color: #7A9B8E,
-    outlined-label-text-color: #636E72,
+    outlined-label-text-color: #3d4f44,
   ));
-  
 
-  @include mat.theme-overrides((
-    surface: #FAF9F7,
-  ));
+  // @include mat.theme-overrides((
+  //   surface: #FAF9F7,
+  // ));
 }
 
 body {
@@ -43,8 +38,15 @@ body {
 }
 
 * {
-  font-family: 'Inter';
+  font-family: 'Cormorant Garamond';
   font-weight: 300;
-  letter-spacing: -.75px;
+  letter-spacing: 0px;
   scroll-behavior: smooth;;
 }
+
+// :root {
+//   @include mat.card-overrides((
+//     outlined-container-color: orange,
+//     outlined-container-elevation: red,
+//   ));
+// }
