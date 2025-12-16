@@ -1,3 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 // Home page styling
 #home {
     position: relative;
@@ -12,16 +23,23 @@
 .welcome-card {
   background-color: rgba(250, 249, 247, 0.8);
   max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .welcome-caption {
     display: flex;
     align-items: center;
-    margin: clamp(20px, 5vw, 50px) clamp(15px, 5vw, 50px) 0;
+    margin: clamp(15px, 5vw, 20px) clamp(15px, 5vw, 50px) 0;
     justify-content: space-around;
     font-family: 'Crimson Text', serif;
     font-size: 1.25rem;
     color: #3d4f44;
+}
+
+.welcome-caption h1 {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 .welcome-description {
@@ -31,6 +49,7 @@
     justify-content: space-around;
     font-size: clamp(18px, 2.5vw, 30px);
     color: #3d4f44;
+    text-align: center;
 }
 
 .welcome-btns {
@@ -61,12 +80,12 @@
     padding: clamp(20px, 5vw, 100px);
     width: 100%;
     display: flex;
+    justify-content: start;
 }
 
 .home-btn {
-    font-size: clamp(18px, 2.5vw, 30px);
-    margin-right: 25px;
-    padding: clamp(15px, 2vw, 30px);
+    font-size: clamp(16px, 2.5vw, 24px);
+    padding: clamp(12px, 2vw, 24px) clamp(20px, 3vw, 36px);
 }
 
 // Header styling
@@ -86,7 +105,7 @@
 }
 
 .title {
-  font-size: clamp(18px, 2.5vw, 25px);
+  font-size: clamp(16px, 2.5vw, 25px);
   white-space: nowrap;
   flex-shrink: 0;
   margin-right: auto;
@@ -101,8 +120,8 @@
 
 // Make header buttons smaller on mobile
 .header-background button {
-  font-size: clamp(12px, 1.5vw, 18px);
-  padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
+  font-size: clamp(11px, 1.5vw, 18px);
+  padding: clamp(4px, 1vw, 8px) clamp(6px, 2vw, 16px);
   white-space: nowrap;
 }
 
@@ -112,24 +131,26 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  // padding: 4rem 2rem;
+  padding: clamp(1rem, 3vw, 3rem) clamp(1rem, 3vw, 2rem);
 }
 
 .our-values-title {
     margin: clamp(10px, 5vw, 10px) clamp(15px, 5vw, 50px) 0;
     justify-content: space-around;
-    font-size: clamp(30px, 2vw, 40px);
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-align: center;
 }
 
 .our-values-intro {
   max-width: 900px;
-  margin: 0 auto 5rem;
+  width: 100%;
+  margin: 0 auto 3rem;
   text-align: center;
 }
 
 .our-values-intro h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
   color: #3d4f44;
   margin-bottom: 2rem;
   font-weight: 300;
@@ -137,7 +158,7 @@
 
 .our-values-intro p {
   font-family: 'Crimson Text', serif;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.9;
   color: #5a6b5f;
 }
@@ -146,36 +167,59 @@
   display: flex;
   flex-direction: row;
   max-width: 1500px;
-  align-items: center;
+  width: 100%;
+  align-items: stretch;
   font-family: 'Cormorant Garamond', serif;
   color: #3d4f44;
   margin-bottom: 2rem;
   font-weight: 300;
+  padding: clamp(15px, 3vw, 30px);
+  gap: clamp(1rem, 3vw, 2rem);
 }
 
-.our-values-compassion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.our-values-independence {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+.our-values-compassion,
+.our-values-independence,
 .our-values-dignity {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.our-values-compassion h1,
+.our-values-independence h1,
+.our-values-dignity h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.our-values-compassion svg,
+.our-values-independence svg,
+.our-values-dignity svg {
+  width: clamp(80px, 15vw, 130px);
+  height: clamp(80px, 15vw, 130px);
+  flex-shrink: 0;
+}
+
+.our-values-compassion p,
+.our-values-independence p,
+.our-values-dignity p {
+  margin: 15px clamp(10px, 3vw, 40px) 0;
+  text-align: center;
+  font-size: clamp(0.9rem, 1.8vw, 1.0625rem);
+  line-height: 1.7;
+}
+
+.our-mission-desc {
+  font-family: 'Crimson Text', serif;
+  color: #5a6b5f;
 }
 
 .our-values-desc {
-    margin: clamp(15px, 5vw, 20px) clamp(90px, 5vw, 100px);
-    font-size: clamp(15px, 2.5vw, 20px);
+    margin: clamp(15px, 5vw, 20px) clamp(20px, 5vw, 100px);
+    font-size: clamp(1rem, 2vw, 1.25rem);
     text-wrap: balance;
     text-align: center;
 }
@@ -186,20 +230,58 @@
   min-height: 100vh;
   width: 100%;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.contact-container iframe {
+  flex: 0 1 640px;
+  min-width: 0;
+  height: 1000px;
+  border: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 .side-description {
-  padding-left: 50px;
-  inline-size: 400px; 
-  text-align: start;
+  flex: 0 0 400px;
+  max-width: 400px;
+}
+
+.side-description p {
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.9;
+  color: #5a6b5f;
+}
+
+.side-description h2 {
+  margin-top: 0px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #3d4f44;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 mat-card {
   animation: slide-fade 1s;
-  padding: clamp(30px, 2vw, 60px);
+  padding: clamp(20px, 3vw, 60px);
+  box-sizing: border-box;
 }
 
 @keyframes slide-fade {
@@ -214,15 +296,66 @@ mat-card {
   }
 }
 
-// Responsive adjustments for small screens only
-@media (max-width: 768px) {
-  .title {
-    font-size: 16px;
+// Mobile responsive breakpoints
+@media (max-width: 1024px) {
+  .our-values-actual-values {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .background {
+  .our-values-compassion,
+  .our-values-independence,
+  .our-values-dignity {
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .contact-container {
     flex-direction: column;
-    padding: 15px;
+    align-items: center;
+  }
+
+  .contact-container iframe {
+    order: 1;
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .side-description {
+    flex: 1;
+    max-width: 600px;
+    width: 100%;
+    order: -1; /* makes the description appear first on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: clamp(14px, 3vw, 18px);
+  }
+
+  .header-background button {
+    font-size: clamp(10px, 2vw, 14px);
+    padding: 4px 8px;
+  }
+
+  .welcome-card {
+    max-width: 100%;
+  }
+
+  .home-btn {
+    margin-right: 0;
+    width: auto;
+    font-size: clamp(14px, 3vw, 18px);
+  }
+
+  .our-values-intro {
+    margin-bottom: 2rem;
+  }
+
+  .contact-container iframe {
+    height: 1000px;
   }
 }
 
@@ -241,22 +374,100 @@ mat-card {
   }
 
   .nav-buttons {
-    gap: 5px;
+    gap: 3px;
+  }
+
+  .header-background button {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .content-overlay {
+    padding: clamp(10px, 3vw, 20px);
+  }
+
+  .welcome-caption {
+    margin: 15px 10px 0;
+  }
+
+  .welcome-description {
+    margin: -15px 10px 15px;
+  }
+
+  .welcome-btns {
+    gap: 10px;
+    margin-bottom: 20px;
   }
 
   .home-btn {
-    margin-right: 0;
-    width: auto;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  #about {
+    padding: 1rem 0.5rem;
+  }
+
+  .our-values-intro,
+  .our-values-actual-values {
+    padding: 15px;
+  }
+
+  .our-values-compassion p,
+  .our-values-independence p,
+  .our-values-dignity p {
+    margin: 10px 5px 0;
+  }
+
+  .contact-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .responsive-iframe-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+  }
+
+  .response-iframe-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .side-description {
+    padding: 0 1rem;
+  }
+
+  mat-card {
+    padding: 15px;
   }
 }
 
-.care-svg {
-  padding-top: 15px;
-  fill: #7A9B8E;
-  stroke: #7A9B8E;
-}
+// Extra small devices
+@media (max-width: 360px) {
+  .header-background button {
+    font-size: 9px;
+    padding: 2px 4px;
+  }
 
-// .independence-svg {
-//   fill: #7A9B8E;
-//   stroke: #7A9B8E;
-// }
+  .title {
+    font-size: 12px;
+  }
+
+  .home-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .contact-container iframe {
+    height: 1000px;
+  }
+}
